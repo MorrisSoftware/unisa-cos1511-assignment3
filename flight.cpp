@@ -1,21 +1,23 @@
 #include <string>
-#include "Plane.cpp"
+#include "Flight.hpp"
 
-class Flight
+Flight::Flight(string reference, string arrival_time, string departure_time, Aeroplane aeroplane);
 {
-private:
-  string reference;
-  string arrival_time;
-  string departure_time;
-  Plane plane;
+  reference = reference;
+  arrival_time = arrival_time;
+  departure_time = departure_time;
+}
 
-public:
-  Flight(string reference, string arrival_time, string departure_time, plane::plane plane);
-  string getReference();
-  string getArrivalTime();
-  string getDepartureTime();
+string getReference(){
+  return reference;
+}
+string getArrivalTime(){
+  return arrival_time;
+}
+string getDepartureTime(){
+  return departure_time;
+};
+Aeroplane getAeroplane(){
+  return aeroplane;
 };
 
-Flight::Flight(string reference, string arrival_time, string departure_time)
-{
-}

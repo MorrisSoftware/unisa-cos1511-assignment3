@@ -1,39 +1,41 @@
 #include <string>
+#include "Seat.hpp"
 
-class seat
-{
-private:
-
-  string number;
-  float cost;
-
-public:
-
-  seat(string number, float cost)
+  Seat::Seat(int number, char row, TicketClass ticketClass, bool booked)
   {
-    this.number = number;
-    this.cost = cost;
+    number = number;
+    row = row;
+    ticketClass = ticketClass;
+    booked = booked;
   }
 
-  void setNumber(string number)
+  string Seat::getNumber()
   {
-    this.number = number
+    return number;
   }
 
-  void setCost(float cost)
+  char Seat::getRow()
   {
-    this.cost = cost
+    return row;
   }
 
-  string getNumber()
+  float Seat::getCost()
   {
-    return this.number;
+    return BASE_COST * ticketClass.markup;
   }
 
-  float getCost()
+  int getTicketClass()
   {
-    return this.cost;
+    return ticketClass;
   }
 
-};
+  bool Seat::getBooked()
+  {
+    return booked;
+  }
+
+  void Seat::setBooked(bool booked)
+  {
+    booked = booked;
+  }
 
