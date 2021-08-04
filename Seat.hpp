@@ -1,4 +1,4 @@
-#include <string>
+
 #include "TicketClass.hpp"
 
 class Seat
@@ -19,5 +19,5 @@ public:
   float getCost();
   bool getBooked();
   TicketClass getTicketClass();
-  void setBooked();
+  void setBooked(bool booked);
 };

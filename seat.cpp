@@ -1,41 +1,40 @@
 #include <string>
 #include "Seat.hpp"
 
-  Seat::Seat(int number, char row, TicketClass ticketClass, bool booked)
-  {
-    number = number;
-    row = row;
-    ticketClass = ticketClass;
-    booked = booked;
-  }
+Seat::Seat(char row, int number, TicketClass ticketClass, bool booked)
+{
+  row = row;
+  number = number;
+  ticketClass = ticketClass;
+  booked = booked;
+}
 
-  string Seat::getNumber()
-  {
-    return number;
-  }
+int Seat::getNumber()
+{
+  return number;
+}
 
-  char Seat::getRow()
-  {
-    return row;
-  }
+char Seat::getRow()
+{
+  return row;
+}
 
-  float Seat::getCost()
-  {
-    return BASE_COST * ticketClass.markup;
-  }
+float Seat::getCost()
+{
+  return BASE_COST * ticketClass.getMarkup();
+}
 
-  int getTicketClass()
-  {
-    return ticketClass;
-  }
+TicketClass Seat::getTicketClass()
+{
+  return ticketClass;
+}
 
-  bool Seat::getBooked()
-  {
-    return booked;
-  }
+bool Seat::getBooked()
+{
+  return booked;
+}
 
-  void Seat::setBooked(bool booked)
-  {
-    booked = booked;
-  }
-
+void Seat::setBooked(bool booked)
+{
+  booked = booked;
+}
