@@ -1,16 +1,16 @@
 
-#include "TicketClass.hpp"
+#ifndef SEAT_H
+#define SEAT_H
+#include "TicketClass.h"
 
 class Seat
 {
 private:
-  const float BASE_COST = 1600.00;
-
-  TicketClass ticketClass;
+  float BASE_COST;
   int number;
   char row;
-  float baseCost;
   bool booked;
+  TicketClass ticketClass;
 
 public:
   Seat(char row, int number, TicketClass ticketClass, bool booked);
@@ -21,3 +21,4 @@ public:
   TicketClass getTicketClass();
   void setBooked(bool booked);
 };
+#endif

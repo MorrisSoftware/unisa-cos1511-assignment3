@@ -1,8 +1,9 @@
-#include <string>
-#include "Seat.hpp"
+#include "Seat.h"
 
 Seat::Seat(char row, int number, TicketClass ticketClass, bool booked)
 {
+  BASE_COST = 1600.00;
+
   row = row;
   number = number;
   ticketClass = ticketClass;

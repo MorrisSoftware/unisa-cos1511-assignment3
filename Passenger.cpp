@@ -1,6 +1,6 @@
-#include "Passenger.hpp"
+#include "Passenger.h"
 
-Passenger::Passenger(string firstname, string lastname)
+Passenger::Passenger(std::string firstname, std::string lastname)
 {
   firstName = firstname;
   lastName = lastname;

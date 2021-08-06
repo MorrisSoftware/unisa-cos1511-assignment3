@@ -1,5 +1,4 @@
-
-#include "Aeroplane.hpp"
+#include "Aeroplane.h"
 #include <string>
 
 Aeroplane::Aeroplane(int rows, int seatsPerRow, int tailNumber)
@@ -17,7 +16,7 @@ Aeroplane::Aeroplane(int rows, int seatsPerRow, int tailNumber)
     {
       char rowLetter = (char)(row + 65);
 
-      if (row < 5)
+      if (row < FIRST_CLASS_ROWS)
       {
         seats[std::to_string(rowLetter + (char)seatNumber)] = Seat(rowLetter, seatNumber, ticketClasses["First Class"], false);
       }
@@ -44,7 +43,7 @@ int Aeroplane::getTailNumber()
   return tailNumber;
 }
 
-std::map<std::string, Seat::Seat> Aeroplane::getSeats()
+std::map<std::string, Seat> Aeroplane::getSeats()
 {
   return seats;
 }

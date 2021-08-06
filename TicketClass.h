@@ -1,3 +1,5 @@
+#ifndef TICKETCLASS_H
+#define TICKETCLASS_H
 #include <string>
 
 class TicketClass
@@ -10,4 +12,4 @@ public:
   std::string getTicketType();
   float getMarkup();
 };
-
+#endif

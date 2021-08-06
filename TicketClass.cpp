@@ -1,4 +1,4 @@
-#include "TicketClass.hpp"
+#include "TicketClass.h"
 
 TicketClass::TicketClass(std::string ticketType, float markup)
 {
