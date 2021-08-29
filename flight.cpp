@@ -1,8 +1,7 @@
-#ifndef FLIGHT_H
 #include <string>
 #include "Flight.h"
 
-Flight::Flight(string reference, string arrival_time, string departure_time, string origin_city, string destination_city, Aeroplane aeroplane);
+Flight::Flight(std::string reference, std::string arrival_time, std::string departure_time, std::string origin_city, std::string destination_city, Aeroplane aeroplane)
 {
   reference = reference;
   arrival_time = arrival_time;
@@ -11,30 +10,31 @@ Flight::Flight(string reference, string arrival_time, string departure_time, str
   destination_city = destination_city;
 }
 
-string getReference()
+std::string Flight::getReference()
 {
   return reference;
 }
-string getArrivalTime()
+std::string Flight::getArrivalTime()
 {
   return arrival_time;
 }
 
-string getDepartureTime()
+std::string Flight::getDepartureTime()
 {
   return departure_time;
-};
+}
 
-string getOriginCity()
+std::string Flight::getOriginCity()
 {
   return origin_city;
 }
-string getDestinationCity()
+
+std::string Flight::getDestinationCity()
 {
   return destination_city;
 }
 
-Aeroplane getAeroplane()
+Aeroplane Flight::getAeroplane()
 {
   return aeroplane;
-};
+}

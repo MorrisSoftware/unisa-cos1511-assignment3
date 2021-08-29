@@ -13,15 +13,15 @@ private:
 
   int rows;
   int seatsPerRow;
-  int tailNumber;
-  std::map<std::string, TicketClass> ticketClasses;
-  std::map<std::string, Seat> seats;
+  std::string tailNumber;
+  std::map<std::string, TicketClass*> ticketClasses;
+  std::map<std::string, Seat*> seats;
 
 public:
-  Aeroplane(int rows, int seatsPerRow, int tailNumber);
+  Aeroplane(int rows, int seatsPerRow, std::string tailNumber);
   int getRows();
   int getSeatsPerRow();
-  int getTailNumber();
+  std::string getTailNumber();
   std::map<std::string, Seat> getSeats();
 };
 #endif
