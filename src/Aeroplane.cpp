@@ -1,5 +1,6 @@
 #include "Aeroplane.h"
 #include <string>
+#include <iostream>
 
 Aeroplane::Aeroplane(){}
 
@@ -11,23 +12,23 @@ Aeroplane::Aeroplane(int rows, int seatsPerRow, std::string tailNumber)
 
   std::string seat;
 
-  ticketClasses.insert(std::make_pair("Economy", TicketClass("Economy", 1.00)));
-  ticketClasses.insert(std::make_pair("First Class", TicketClass("Economy", 1.20)));
+  _ticketClasses.insert(std::make_pair("Economy", TicketClass("Economy", 1.00)));
+  _ticketClasses.insert(std::make_pair("First Class", TicketClass("Economy", 1.20)));
 
   for (int row = 0; row < _rows; row++)
   {
     for (int seatNumber = 0; seatNumber < _seatsPerRow; seatNumber++)
     {
       char rowLetter = (char)(row + 65);
-      seat = rowLetter + (char)seatNumber;
+      seat = rowLetter + std::to_string(seatNumber);
 
       if (row < FIRST_CLASS_ROWS)
       {
-        seats.insert(std::make_pair(seat, Seat(rowLetter, seatNumber, ticketClasses["First Class"], false)));
+        _seats.insert(std::make_pair(seat, Seat(rowLetter, seatNumber, _ticketClasses["First Class"], false)));
       }
       else
       {
-        seats.insert(std::make_pair(seat, Seat(rowLetter, seatNumber, ticketClasses["Economy"], false)));
+        _seats.insert(std::make_pair(seat, Seat(rowLetter, seatNumber, _ticketClasses["Economy"], false)));
       }
     }
   }
@@ -50,5 +51,5 @@ std::string Aeroplane::getTailNumber()
 
 std::map<std::string, Seat> Aeroplane::getSeats()
 {
-  return seats;
+  return _seats;
 }

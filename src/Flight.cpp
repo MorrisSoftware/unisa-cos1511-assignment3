@@ -3,7 +3,7 @@
 
 Flight::Flight(){}
 
-Flight::Flight(std::string reference, std::string arrival_time, std::string departure_time, std::string origin_city, std::string destination_city, Aeroplane aeroplane, TravelAgent travelAgent)
+Flight::Flight(std::string reference, std::string departure_time, std::string arrival_time, std::string origin_city, std::string destination_city, Aeroplane aeroplane, TravelAgent travelAgent)
 {
   _reference = reference;
   _arrivalTime = arrival_time;

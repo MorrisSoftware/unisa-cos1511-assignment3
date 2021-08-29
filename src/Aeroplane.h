@@ -14,8 +14,8 @@ private:
       int _rows;
       int _seatsPerRow;
       std::string _tailNumber;
-      std::map<std::string, TicketClass> ticketClasses;
-      std::map<std::string, Seat> seats;
+      std::map<std::string, TicketClass> _ticketClasses;
+      std::map<std::string, Seat> _seats;
 
     public:
       Aeroplane();

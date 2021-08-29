@@ -17,7 +17,7 @@ private:
 
 public:
   Flight();
-  Flight(std::string reference, std::string arrival_time, std::string departure_time, std::string origin_city, std::string destination_city, Aeroplane aeroplane, TravelAgent travelAgent);
+  Flight(std::string reference, std::string departure_time, std::string arrival_time, std::string origin_city, std::string destination_city, Aeroplane aeroplane, TravelAgent travelAgent);
   std::string getReference();
   std::string getArrivalTime();
   std::string getDepartureTime();

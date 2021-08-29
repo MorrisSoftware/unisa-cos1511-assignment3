@@ -10,5 +10,6 @@ private:
 
 public:
   Passenger(std::string firstname, std::string lastname);
+  std::string getName();
 };
 #endif
