@@ -24,5 +24,6 @@ public:
   std::string getOriginCity();
   std::string getDestinationCity();
   Aeroplane getAeroplane();
+  TravelAgent getTravelAgent();
 };
 #endif

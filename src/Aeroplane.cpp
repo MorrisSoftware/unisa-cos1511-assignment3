@@ -9,6 +9,7 @@ Aeroplane::Aeroplane(int rows, int seatsPerRow, std::string tailNumber)
   _rows = rows;
   _seatsPerRow = seatsPerRow;
   _tailNumber = tailNumber;
+  FIRST_CLASS_ROWS = 4;
 
   std::string seat;
 
@@ -17,7 +18,7 @@ Aeroplane::Aeroplane(int rows, int seatsPerRow, std::string tailNumber)
 
   for (int row = 0; row < _rows; row++)
   {
-    for (int seatNumber = 0; seatNumber < _seatsPerRow; seatNumber++)
+    for (int seatNumber = 1; seatNumber < _seatsPerRow+1; seatNumber++)
     {
       char rowLetter = (char)(row + 65);
       seat = rowLetter + std::to_string(seatNumber);
@@ -44,6 +45,11 @@ int Aeroplane::getSeatsPerRow()
   return _seatsPerRow;
 }
 
+int Aeroplane::getNumberOfFirstClassRows()
+{
+  return FIRST_CLASS_ROWS;
+}
+
 std::string Aeroplane::getTailNumber()
 {
   return _tailNumber;
@@ -52,4 +58,9 @@ std::string Aeroplane::getTailNumber()
 std::map<std::string, Seat> Aeroplane::getSeats()
 {
   return _seats;
+}
+
+std::map<std::string, TicketClass> Aeroplane::getTicketClasses()
+{
+  return _ticketClasses;
 }

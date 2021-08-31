@@ -17,6 +17,7 @@ public:
   Seat(char row, int number, TicketClass ticketClass, bool booked);
   char getRow();
   int getNumber();
+  std::string getSeatNumber();
   float getCost();
   bool getBooked();
   TicketClass getTicketClass();

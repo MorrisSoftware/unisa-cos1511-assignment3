@@ -4,8 +4,6 @@ Seat::Seat(){}
 
 Seat::Seat(char row, int number, TicketClass ticketClass, bool booked)
 {
-  BASE_COST = 1600.00;
-
   _row = row;
   _number = number;
   _ticketClass = ticketClass;
@@ -17,14 +15,21 @@ int Seat::getNumber()
   return _number;
 }
 
+std::string Seat::getSeatNumber()
+{
+ if (_booked == true)
+ {
+   return "**";
+ }
+ else
+ {
+   return _row + std::to_string(_number);
+ }
+}
+
 char Seat::getRow()
 {
   return _row;
-}
-
-float Seat::getCost()
-{
-  return BASE_COST * _ticketClass.getMarkup();
 }
 
 TicketClass Seat::getTicketClass()

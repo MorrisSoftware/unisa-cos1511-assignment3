@@ -42,3 +42,8 @@ Aeroplane Flight::getAeroplane()
 {
   return _aeroplane;
 }
+
+TravelAgent Flight::getTravelAgent()
+{
+  return _travelAgent;
+}
